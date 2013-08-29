@@ -34,7 +34,7 @@ function loadOccupation() {
             fiftieth_percentile = data['50'],
             seventyfifth_percentile = data['75'],
             ninetieth_percentile = data['90'];
-        $('.container').text("On average, " + occupation.name + " make about $" + fiftieth_percentile + " an hour.");
+        $('.container').text("The median hourly wage for " + occupation.name + " is $" + fiftieth_percentile + ".");
     });
 }
 

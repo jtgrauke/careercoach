@@ -11,7 +11,7 @@ packet = {
 
 // Object for the occupation you want data on
 occupation = {
-    name: 'Registered Nurse',
+    name: 'Registered Nurses',
     soc: '29-1141.00',
     zip: '83843',
     radius: '50'
@@ -24,15 +24,17 @@ function loadOccupation() {
         url: config.baseUrl + "/packets/"+ packet.earnings +"/",
         data: {'OccupationId':occupation.soc, 'x-ResponseType':'json', 'x-Password':config.password},
         beforeSend: function() {
-            $('.header .title').text('Loading...');
+            $('.container').text('Loading...');
         },
-        // Now that it's loaded, write the occ name
-        complete: function(){
-            $('.header .title').text(occupation.name);
-        }
     // Upon success - log the data
     }).success(function(data){
         console.log(data);
+        var tenth_percentile = data['10'],
+            twentyfifth_percentile = data['25'],
+            fiftieth_percentile = data['50'],
+            seventyfifth_percentile = data['75'],
+            ninetieth_percentile = data['90'];
+        $('.container').text("On average, " + occupation.name + " make about $" + fiftieth_percentile + " an hour.");
     });
 }
 

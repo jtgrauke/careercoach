@@ -1,10 +1,13 @@
 body {
-    font-family: helvetica;
+    font-family: source sans pro;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 1.5;
     position: absolute;
     width: 100%;
     height: 100%;
+    background: #eee;
+    color: #353535;
 }
 
 a {
@@ -16,25 +19,66 @@ a:hover {
     text-decoration: none;
 }
 
-.header {
-    width: 500px;
-    text-align: center;
+.inner {
+    width: 80%;
     margin: 0 auto;
-    border: 2px solid #222;
-    position: relative;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -o-border-radius: 3px;
-    -ms-border-radius: 3px;
+    padding: 50px 10%;
+}
+
+.header {
+    background: #fff;
+    padding: 75px 10%;
+}
+
+.description_wrap {
+    float: left;
+    max-width: 600px;
+    width: 63%;
+}
+
+.occ_name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+i {
+    margin-right: 7px;
+}
+
+.related_wrap {
+    float: right;
+    width: 33%;
+    max-width: 300px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 10px 15px;
     border-radius: 3px;
-}
-
-.title {
+    border-bottom: 2px solid rgba(10,10,10,0.25);
+    background: #4bd;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 0 15px;
     display: inline-block;
-    padding: 18px;
 }
 
-.container {
-    width: 960px;
-    margin: 4% auto;
+.btn:active {
+    border-top: 2px solid rgba(10,10,10,0.25);
+    border-bottom:0;
+}
+
+.earnings_wrap {
+    clear: both;
+    margin: 50px 0;
+    display: inline-block;
+}
+
+.occ_earn {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.data {
+    color: #4bd;
 }
